@@ -1,4 +1,7 @@
-useEffect(() => {
+import { useEffect } from 'react';
+
+
+export const useSocket = () => {
   //connect to websocket API
   ws.current = new WebSocket("wss://ws-feed.pro.coinbase.com");
   //inside useEffect we need to make API with async function  
@@ -31,4 +34,4 @@ useEffect(() => {
   
   //call async function
   apiCall()
-},[])
+},[]
