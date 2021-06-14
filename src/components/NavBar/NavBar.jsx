@@ -1,6 +1,6 @@
 import { Fragment, useState, useEffect } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { LoginIcon, BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { LoginIcon, LogoutIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Link } from "react-router-dom";
 import './NavBar.css';
 
@@ -70,12 +70,13 @@ export default function NavBar(props) {
                 { loggedIn ?  
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button className="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                  <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-6 w-6" aria-hidden="true" />
+                  <span className="sr-only">Sign Out</span>
+                  <LogoutIcon className="h-6 w-6" aria-hidden="true" 
+                  onClick={props.handleLogout}/>
                 </button>
 
                 {/* Profile dropdown */}
-                <Menu as="div" className="ml-3 relative">
+                {/* <Menu as="div" className="ml-3 relative">
                   {({ open }) => (
                     <>
                       <div>
@@ -146,7 +147,7 @@ export default function NavBar(props) {
                       </Transition>
                     </>
                   )}
-                </Menu>
+                </Menu> */}
               </div>
               : 
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
