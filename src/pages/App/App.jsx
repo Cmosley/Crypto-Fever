@@ -11,6 +11,9 @@ import {formatData} from "../../utils"
 
 
 function App (props) {
+  const [user, setUser] = useState(authService.getUser())
+  const history = useHistory();
+
   const [currencies, setcurrencies] = useState([]);
   const [pair, setpair] = useState("");
   const [price, setprice] = useState("0.00");
@@ -28,6 +31,7 @@ function App (props) {
 
     const apiCall = async () => {
       await fetch(url + "/products")
+      
         .then((res) => res.json())
         .then((data) => (pairs = data));
       
@@ -49,7 +53,7 @@ function App (props) {
 
       
       setcurrencies(filtered);
-
+      setTimeout(5000);
       first.current = true;
     };
 
@@ -110,10 +114,6 @@ function App (props) {
   };
 
 
-
-  const [user, setUser] = useState(authService.getUser())
-  const history = useHistory();
-
   const handleLogout = () => {
     authService.logout();
     setUser(null);
@@ -127,8 +127,6 @@ function App (props) {
     return (
       <>
         <NavBar user={user} handleLogout={handleLogout}/>
-        
-        
         <Route
           exact
           path="/"

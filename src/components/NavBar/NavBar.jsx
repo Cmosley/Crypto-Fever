@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import './NavBar.css';
 
 const navigation = [
-  { name: 'Dashboard', href: '/dashboard', current: false, loggedIn: [false]},
+  { name: 'Dashboard', href: '/', current: false, loggedIn: [true]},
   { name: 'Sign Up', href: '/signup', current: false, loggedIn: [false] },
 ]
 
@@ -27,7 +27,7 @@ export default function NavBar(props) {
   }, [props.user]);
 
   return (
-    <Disclosure as="nav" className="bg-green-500 shadow-md">
+    <Disclosure as="nav" className="bg-blue-600 shadow-md">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -44,7 +44,7 @@ export default function NavBar(props) {
                 </Disclosure.Button>
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex-shrink-0 flex items-center">
+                <div className="flex-shrink-0 flex items-center mb-4">
                   <Link to='/'>
                   <img width="250" src="/images/crypto-fever.png" alt='logo'/>
                   </Link>
@@ -69,7 +69,7 @@ export default function NavBar(props) {
               
                 { loggedIn ?  
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button className="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                <button className="bg-blue-600 p-1 rounded-full text-black hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                   <span className="sr-only">Sign Out</span>
                   <LogoutIcon className="h-6 w-6" aria-hidden="true" 
                   onClick={props.handleLogout}/>

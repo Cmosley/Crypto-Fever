@@ -13,7 +13,7 @@ function Dashboard({ price, data }) {
     maintainAspectRatio: false
   };
   if (price === "0.00") {
-    return <h2>please select a currency pair</h2>;
+    return <div className="flex justify-center"><h1>Please select a currency</h1></div>;
   }
   return (
     <div className="dashboard">
