@@ -39,7 +39,7 @@ export default function Login (props) {
         <div className="mx-auto w-full max-w-sm lg:w-96">
           <div className="flex justify-center">
           <img width="150" 
-          src="/images/Auto-Mastery-fav.png" 
+          src="/images/crypto-fever-large.png" 
           alt='logo'
           />
           </div>
@@ -101,7 +101,7 @@ export default function Login (props) {
       <div className="hidden lg:block relative w-0 flex-1">
         <img
           className="absolute inset-0 h-full w-full object-cover"
-          src="/images/login-car.jpg"
+          src="/images/crypto-fever-large.png"
           alt=""
         />
       </div>

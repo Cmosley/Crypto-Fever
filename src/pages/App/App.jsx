@@ -127,13 +127,23 @@ function App (props) {
     return (
       <>
         <NavBar user={user} handleLogout={handleLogout}/>
-        <CurrencySelector currencies={currencies} pair={pair} handleSelect={handleSelect}/>
-        <Dashboard price={price} data={pastData} />
+        
+        
         <Route
           exact
           path="/"
-          render={() => (
-            <h1>hello</h1>
+          render={({ history }) => (
+            <>
+            <CurrencySelector 
+              currencies={currencies} 
+              pair={pair} 
+              handleSelect={handleSelect}
+            />
+            <Dashboard 
+              price={price} 
+              data={pastData} />
+            </>
+            
           )}
         />
         <Route
