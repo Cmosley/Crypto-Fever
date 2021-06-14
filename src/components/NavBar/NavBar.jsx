@@ -1,15 +1,11 @@
 import { Fragment, useState, useEffect } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { LoginIcon, BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import './NavBar.css';
 
 const navigation = [
-  { name: 'Dashboard', href: '/dashboard', current: false, loggedIn: [true]},
-  { name: 'Sales', href: '/sales', current: false, loggedIn: [true]},
-  { name: 'Goals', href: '/goals', current: false, loggedIn: [true] },
-  { name: 'About', href: '/about', current: false, loggedIn: [false] },
-  { name: 'KPI', href: '/kpi', current: false, loggedIn: [false] },
+  { name: 'Dashboard', href: '/dashboard', current: false, loggedIn: [false]},
   { name: 'Sign Up', href: '/signup', current: false, loggedIn: [false] },
 ]
 

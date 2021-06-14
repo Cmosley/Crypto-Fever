@@ -7,6 +7,7 @@ import authService from "../../services/authService"
 import "./App.css";
 import Dashboard from "../../components/Dashboard/Dashboard"
 import CurrencySelector from "../../components/CurrencySelector/CurrencySelector"
+import {formatData} from "../../utils"
 
 
 function App (props) {
