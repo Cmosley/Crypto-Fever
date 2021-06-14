@@ -1,4 +1,5 @@
 import React from 'react';
+import "./CurrencySelector.css"
 
 export default function Selector ({currencies, pair, handleSelect}) {
 

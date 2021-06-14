@@ -27,7 +27,7 @@ export default function NavBar(props) {
   }, [props.user]);
 
   return (
-    <Disclosure as="nav" className="bg-white shadow-md">
+    <Disclosure as="nav" className="bg-green-500 shadow-md">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -46,7 +46,7 @@ export default function NavBar(props) {
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
                   <Link to='/'>
-                  <img width="250" src="/images/Auto-Mastery-logo-v.2.png" alt='logo'/>
+                  <img width="250" src="/images/crypto-fever.png" alt='logo'/>
                   </Link>
                 </div>
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
