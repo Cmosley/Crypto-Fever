@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Selector (props) {
+export default function Selector (currencies, pair, handleSelect) {
 
   return (
     <div className="container">

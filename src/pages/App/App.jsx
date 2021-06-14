@@ -6,6 +6,8 @@ import Login from "../Login/Login";
 import authService from "../../services/authService"
 import "./App.css";
 import Dashboard from "../../components/Dashboard/Dashboard"
+import CurrencySelector from "../../components/CurrencySelector/CurrencySelector"
+
 
 function App (props) {
   const [currencies, setcurrencies] = useState([]);
@@ -124,6 +126,7 @@ function App (props) {
     return (
       <>
         <NavBar user={user} handleLogout={handleLogout}/>
+        <CurrencySelector currencies={currencies} pair={pair} handleSelect={handleSelect}/>
         <Dashboard price={price} data={pastData} />
         <Route
           exact
